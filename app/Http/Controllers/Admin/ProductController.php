@@ -59,8 +59,8 @@ class ProductController extends BaseController
         $data 			=  new Product();
 		
 		if(!empty($request->txtID)){
-			
-			$data->where('id', $request->id)->update([
+
+			$data->where('id', $request->txtID)->update([
 				"product_name"	=> $request->txtName,
 				"stock"			=> $request->txtStock
 			]);
